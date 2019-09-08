@@ -23,8 +23,6 @@ class ParseTest(unittest.TestCase):
         for torrent, expected_result in zip(torrents, expected_results):
             print("Test: " + torrent)
             result = PTN.parse(torrent)
-            print (f"\n In:{torrent}\tEx:{expected_result}")
-
             for key in expected_result:
                 if not expected_result[key]:
                     self.assertNotIn(key, result)
