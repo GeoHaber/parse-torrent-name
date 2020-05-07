@@ -21,9 +21,9 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(len(torrents), len(expected_results))
 
         for torrent, expected_result in zip(torrents, expected_results):
-            print("Test: " + torrent)
+            print("Test:" + torrent)
             result = PTN.parse(torrent)
-            print (f"\n In:{torrent}\tEx:{expected_result}")
+            print (f"\nIn:{torrent}\nEx:{expected_result}\n\n")
 
             for key in expected_result:
                 if not expected_result[key]:
